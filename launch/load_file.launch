@@ -1,0 +1,19 @@
+<launch>
+  
+  <!-- Publish point cloud from file -->
+  <node pkg="point_cloud_io" type="read" name="read" output="screen">
+    <param name="file_path" value="/home/tesca/data/part-affordance-dataset/tools/scissors_01/scissors_01_00000027_ply.ply" />
+    <!--param name="file_path" value="/home/tesca/data/part-affordance-dataset/tools/scissors_01/scissors_01_00000060_ply.ply" />
+    <param name="file_path" value="/home/tesca/data/part-affordance-dataset/tools/scissors_01/scissors_01_00000003_ply.ply" />
+    <param name="file_path" value="/home/tesca/data/part-affordance-dataset/tools/shears_01/shears_01_00000009_ply.ply" /-->
+    <!--param name="file_path" value="/home/tesca/data/part-affordance-dataset/tools/shears_01/shears_01_00000033_ply.ply" />
+    <param name="file_path" value="/home/tesca/data/part-affordance-dataset/tools/shears_01/shears_01_00000090_ply.ply" /-->
+    <param name="topic"     value="/point_cloud" />
+    <param name="frame"     value="/image_link" />
+    <param name="rate"      value="1.0" />
+  </node>
+    
+  <!-- Visualize the point cloud in rviz -->
+  <!--node name="rviz" pkg="rviz" type="rviz" args="-d $(find point_cloud_io)/examples/point_cloud_io.rviz" /-->
+    
+</launch>
